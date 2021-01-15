@@ -5,8 +5,8 @@ const knex = require("../database");
 router.get("/", async (request, response) => {
   try {
     // knex syntax for selecting things. Look up the documentation for knex for further info
-    const titles = await knex("meals").select("title");
-    response.send(titles);
+    const meals = await knex("meals").select('*');
+    response.send(meals);
   } catch (error) {
     throw error;
   }
@@ -15,8 +15,7 @@ router.get("/", async (request, response) => {
 //Gets meal by id
 router.get("/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const find = await knex("meals").where({ id });
+       const find = await knex("meals").select ('*').where({id:req.params.id});
     res.json(find);
   } catch (error) {
     throw error;

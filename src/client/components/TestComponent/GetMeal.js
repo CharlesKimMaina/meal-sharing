@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import "./Home.css";
+import "./MealImages.css";
 
-export default function GetMeal(){
-    const[title,setTitle] = useState();
+
+function GetMeal(){
+    const [meals, setMeals] = useState([])
     
-    useEffect(()=>{
-const onSubmit =()=>{
-    (async () => {
-       const mealResponse =  await fetch('http://localhost:5000/api/meals')
-        const responsedata = await mealResponse.json() 
-        console.log(responsedata);
-        setTitle(responsedata);     
-    })()
-}
-    }, [])
+    useEffect(() => {
+        // IIFE
+        (async () => {
+          const mealResponse = await fetch('/api/meals/');
+          const responsedata= await mealResponse.json();
+          console.log(responsedata);
+             setMeals(responsedata);
+            })();
+      }, []);        
 
 return(
-       <div>
-        {title}
+       <div className="meals-samples">           
+        {meals.map((meal) => (           
+            <li key={meal.id}>
+            <li>{meal.title}</li>
+            <li className="pris">{meal.price}</li>
+            <li className="descri">{meal.description} {""}</li></li>
+        ))}           
        </div>
    )
 }
+export default GetMeal;

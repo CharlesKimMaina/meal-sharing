@@ -1,0 +1,96 @@
+.meals-gallery {
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.meals-flavours {
+  padding: 15px;
+  left: 5px;
+  background-color: blueviolet;
+  position: fixed;
+  border-radius: 36px;
+}
+.pris {
+  color: crimson;
+}
+
+.descri {
+  color: darkmagenta;
+  border-bottom: 2px dotted crimson;
+}
+
+.meals-samples {
+  font-family: sans-serif;
+  list-style: none;
+}
+
+.meal-offers img {
+  width: 180px;
+  height: 180px;
+  margin: 5px;
+  margin-left: 0;
+  padding: 2px;
+}
+
+.meal-title {
+  padding: 10px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.col-1 {
+  width: 220px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.col-2 {
+  width: 220px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.meal-rows {
+  display: flex;
+}
+
+.meal-rows2 {
+  display: flex;
+}
+
+.meal-rows3 {
+  display: flex;
+}
+
+.meal-rows4 {
+  display: flex;
+}
+
+.meal-rows5 {
+  display: flex;
+}
+
+.meal-rows6 {
+  display: flex;
+}
+
+.meal-row7 {
+  display: flex;
+}
+
+/*.picture-about {
+  height: 75px;
+  width: 90px;
+} */
+
+@media screen and (max-width: 960px) {
+  .meal-gallery {
+    margin-top: 30px;
+    padding-top: 20px;
+    line-height: 1.5;
+  }
+}

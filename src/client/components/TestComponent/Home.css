@@ -1,0 +1,38 @@
+.welcome {
+  color: blue;
+}
+
+.links {
+  background-color: limegreen;
+  padding: 30px;
+  text-decoration: underline;
+  text-align: center;
+  display: block;
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.intro {
+  color: blueviolet;
+}
+.meal-samples {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 30px;
+}
+
+a[href] {
+  font-weight: bold;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  height: 100px;
+  background-color: cyan;
+}
